@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 220" fill="none" role="img" aria-label="SpeciVerse">
+  <g transform="translate(36 30) scale(2)">
+    <circle cx="40" cy="40" r="34" stroke="#1C3A2E" stroke-width="1.6"/>
+    <ellipse cx="40" cy="40" rx="34" ry="13" transform="rotate(-28 40 40)" stroke="#4E7A5C" stroke-width="1.35"/>
+    <path fill="#1C3A2E" d="M40 62c0 0-17-13-17.8-26C21.4 24 28 16.5 40 12c12 4.5 18.6 12 17.8 24C57 49 40 62 40 62z"/>
+    <path d="M40 17.5v36" stroke="#F6F3EA" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M40 29.5c-5.4 1.5-9 2.8-11.2 3.1M40 39.5c5.6 1.4 9.4 2.6 11.6 2.9" stroke="#F6F3EA" stroke-width="1.05" stroke-linecap="round"/>
+    <circle cx="66.2" cy="18.4" r="2.45" fill="#C6A15A"/>
+    <circle cx="14.2" cy="61.2" r="1.45" fill="#8EAE8A"/>
+  </g>
+  <text x="230" y="122" fill="#1C3A2E" font-family="Georgia, 'Times New Roman', serif" font-size="68">Speci<tspan fill="#3F6B4E" font-style="italic">Verse</tspan></text>
+  <text x="236" y="162" fill="#4E7A5C" font-family="Georgia, 'Times New Roman', serif" font-size="15" letter-spacing="4.6">A LIVING FIELD GUIDE</text>
+</svg>

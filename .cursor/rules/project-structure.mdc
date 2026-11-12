@@ -1,0 +1,33 @@
+---
+description: Next.js structure for WEBSPECIE. No TanStack. Admin, auth, and API stay in their own folders.
+alwaysApply: true
+---
+
+# WEBSPECIE
+
+This app is Next.js (App Router), React, and Tailwind. Do not add TanStack Router, TanStack Query, TanStack Start, or Vite.
+
+## Folders
+
+- `app/` — public routes, root layout, and global styles. Keep pages thin.
+- `app/auth/login` and `app/auth/register` — staff sign-in and the first administrator registration.
+- `app/admin` — dashboard. `app/admin/species` — uploads. `app/admin/users` — staff accounts, administrators only.
+- `app/api` — all backend route handlers: auth, users, and species.
+- `components/auth` and `components/admin` — one component per file, grouped by feature.
+- `components/guide`, `components/layout`, and `components/ui` — public guide and shared primitives.
+- `lib/server` — server-only helpers used by `app/api` and server pages. Login and register read and write the Postgres `users` table through `lib/server/db.ts`. `lib/auth` holds shared roles and session types.
+- `db/schema.sql` — PostgreSQL schema. Species portraits are Cloudinary assets. `data/species.ts` is still the public catalog.
+
+## Access
+
+- Roles are `admin` and `media`.
+- Both roles can use the dashboard and upload species.
+- Only `admin` can open `/admin/users` or call `/api/users`.
+- When an admin adds a user, the password is typed or generated, then emailed with Brevo. Do not return that password in the API response.
+- Keep that check in the page and again in the API route.
+
+```tsx
+// app/admin/users/page.tsx
+const admin = await requireAdmin();
+return <UserManager currentUserId={admin.id} initialUsers={users} />;
+```
